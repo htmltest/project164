@@ -8,7 +8,7 @@ body {min-width:480px; margin:0; padding:0; font:17px/29px Arial, sans-serif; co
 .fonts-loaded body {font-family:Gilroy, sans-serif}
 
 @media screen and (max-width:1119px) {
-    body {font-size:21px; line-height:30px}
+    body {font-size:18px; line-height:24px; color:#777f87}
 }
 
 a {color:#778088}
@@ -20,27 +20,55 @@ a {color:#778088}
 .container {max-width:1120px; margin:0 auto; position:relative}
 .container::after {content:""; display:block; clear:both}
 
+@media screen and (max-width:1119px) {
+    .container {padding:0 15px}
+}
+
 .header {padding:24px 0 25px 0}
 .header::after {content:""; display:block; clear:both}
 .logo {float:left; width:126px; height:38px; background:url(../images/logo.png) no-repeat}
 .logo-dns {float:left; width:228px; height:24px; background:url(../images/logo-dns.png) no-repeat; margin:6px 0 0 47px; position:relative}
 .logo-dns::before {content:""; display:block; width:1px; height:38px; background:#a9a9a9; position:absolute; left:-24px; top:-6px}
 
+@media screen and (max-width:1119px) {
+    .header {padding:20px 0}
+}
+
 .welcome {position:relative}
 .welcome-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/welcome-bg.jpg) no-repeat center; background-size:cover}
+.welcome-photo {float:right; line-height:0; padding:32px 0 39px 0; margin:0 -40px 0 0}
+.welcome-photo img {display:block}
+.welcome-photo-mobile {display:none}
 .welcome-container {float:left; padding:196px 0 0 0}
 .welcome-title {font-size:23px; line-height:30px; color:#fff; font-weight:500}
 .welcome-title img {display:inline-block; vertical-align:top}
 .welcome-title span {display:inline-block; vertical-align:top; height:30px; background:#431cfa; border-radius:15px; padding:0 20px; margin:7px 0 0 13px}
+.welcome-title-mobile {display:none}
 .welcome-text {font-weight:600; font-size:32px; line-height:32px; color:#fff; padding:23px 0 0 0}
+.welcome-period-mobile {display:none}
 .welcome-price {padding:49px 0 0 0}
 .welcome-price-from {display:inline; text-transform:uppercase; color:#f2d233; font-weight:bold; font-size:23px; line-height:57px; margin:0 0 0 8px}
 .welcome-price-value {display:inline; color:#f2d233; font-weight:bold; font-size:57px; line-height:57px}
 .welcome-price-value span {font-size:32px}
 .welcome-price-old {display:inline; color:#868686; font-weight:500; font-size:22px; line-height:57px; text-decoration:line-through; margin:0 0 0 16px}
+.welcome-size-mobile {display:none}
 .welcome-size {width:645px; height:114px; background:url(../images/welcome-size.png) no-repeat; margin:51px 0 0 0}
-.welcome-photo {float:right; line-height:0; padding:32px 0 39px 0; margin:0 -40px 0 0}
-.welcome-photo img {display:block}
+
+@media screen and (max-width:1119px) {
+    .welcome-bg {background-image:url(../images/welcome-bg-mobile.jpg)}
+    .welcome-photo {display:none}
+    .welcome-photo-mobile {display:block; text-align:center; line-height:0; padding:20px 0 0 0; position:relative}
+    .welcome-container {float:none; padding:0; margin:-26px 0 0 0}
+    .welcome-title {display:none}
+    .welcome-title-mobile {display:block; margin:51px auto 0 auto; width:231px; height:35px; background:url(../images/welcome-title-mobile.png)}
+    .welcome-text {font-size:20px; line-height:20px; color:#000; text-align:center; padding:10px 0 0 0}
+    .welcome-period-mobile {display:block; text-align:center; padding:13px 0 0 0}
+    .welcome-period-mobile span {display:inline-block; vertical-align:top; height:30px; background:#431cfa; border-radius:15px; padding:0 20px; font-size:23px; line-height:30px; font-weight:600; color:#fff; letter-spacing:0.575px}
+    .welcome-size-mobile {display:block; width:420px; height:74px; margin:0 auto; background:url(../images/welcome-size-mobile.png) no-repeat}
+    .welcome-size {display:none}
+    .welcome-price {padding:18px 0 20px 0; text-align:center}
+    .welcome-price-old {vertical-align:top; line-height:61px}
+}
 
 .links {padding:65px 0 31px 0}
 .links-inner {margin:0 -47px}
@@ -52,10 +80,20 @@ a {color:#778088}
 .links-item a:hover .links-item-bg {opacity:0.75}
 .links-item-photo {line-height:0; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%)}
 
+@media screen and (max-width:1119px) {
+    .links {padding:0 0 50px 0}
+    .links-inner {margin:0}
+    .links-item {float:none; width:auto; padding:20px 0 0 0}
+}
+
 .btn {display:inline-block; vertical-align:top; height:46px; padding:0 25px; color:#000; text-decoration:none; border-radius:23px; font-weight:600; font-size:34px; line-height:46px; background:#f9c600}
 .btn:hover {opacity:0.8}
 .btn span {font-size:28px; font-weight:500; display:inline-block; vertical-align:middle; position:relative; margin:-2px 50px 0 0}
 .btn span::after {content:""; display:block; position:absolute; right:-26px; top:50%; margin-top:-16px; width:2px; height:30px; background:#675200}
+
+@media screen and (max-width:1119px) {
+    .btn {display:block; height:61px; padding:0; text-align:center; border-radius:30px; line-height:61px}
+}
 
 .group {padding:77px 0 92px 0}
 .group-1 {background:url(../images/group-1.jpg) no-repeat center; background-size:cover}
@@ -66,6 +104,7 @@ a {color:#778088}
 .group-main {height:525px; position:relative; margin:43px -40px 0 -40px}
 .group-opts+.group-main {margin-top:73px}
 .group-main-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover; border-radius:10px}
+.group-main-bg-mobile {display:none}
 .group-main-container {position:absolute; right:0; top:50%; transform:translateY(-50%); width:425px}
 .group-1-main-logo {width:299px; height:46px; background:url(../images/group-1-main-title.png) no-repeat}
 .group-1-main-title {font-weight:600; color:#122036; font-size:30px; line-height:28px; padding:33px 0 0 0}
@@ -73,6 +112,28 @@ a {color:#778088}
 .group-1-main-price span {font-size:24px}
 .group-1-main-price em {font-style:normal; font-size:22px; font-weight:500; color:#868686; margin:0 0 0 22px; text-decoration:line-through}
 .group-1-main-btn {padding:21px 0 0 0}
+
+@media screen and (max-width:1119px) {
+    .group {padding:28px 0 53px 0}
+    .group-1 {background-image:url(../images/group-1-mobile.jpg)}
+    .group-2 {padding-top:40px; padding-bottom:53px}
+    .group-3 {background-image:url(../images/group-3-mobile.jpg)}
+    .group-4 {padding-top:40px; padding-bottom:28px}
+    .group-title {font-size:30px; line-height:36px}
+    .group-subtitle {font-size:20px; line-height:24px; padding:6px 0 0 0}
+    .group-2 .group-subtitle {padding:11px 0 0 0}
+    .group-main {height:683px; margin:20px 0 0 0}
+    .group-main-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover; border-radius:10px}
+    .group-main-bg {display:none}
+    .group-main-container {position:absolute; right:30px; top:auto; transform:none; width:auto; left:30px; bottom:30px}
+
+    .group-1 .group-main {height:380px; margin:20px -15px 0 -15px}
+    .group-1 .group-main-bg-mobile {border-radius:0}
+    .group-1 .group-main-container {bottom:-464px}
+    .group-1-main-title {font-size:20px; line-height:24px; padding:13px 0 0 0}
+    .group-1-main-price {margin:33px 0 0 0}
+    .group-1-main-btn {padding:3px 0 0 0}
+}
 
 .group-2-main-container {width:540px}
 .group-2-main-logo {width:340px; height:63px; background:url(../images/group-2-main-title.png) no-repeat}
@@ -82,6 +143,13 @@ a {color:#778088}
 .group-2-main-price em {font-style:normal; font-size:22px; font-weight:500; color:#868686; margin:0 0 0 22px; text-decoration:line-through}
 .group-2-main-btn {padding:21px 0 0 0}
 .group-2 .btn {padding:0 15px}
+
+@media screen and (max-width:1119px) {
+    .group-2-main-container {width:auto}
+    .group-2-main-title {padding:19px 0 0 0}
+    .group-2-main-btn {padding:16px 0 0 0; margin:0 -15px}
+    .group-2 .btn {padding:0}
+}
 
 .group-3-main-container {width:auto; right:auto; left:72px; top:76px; transform:none}
 .group-3-main-logo {width:376px; height:43px; background:url(../images/group-3-main-title.png) no-repeat}
@@ -94,8 +162,19 @@ a {color:#778088}
 .group-3-main-btn {padding:21px 0 0 0}
 .group-3 .btn {padding:0 15px}
 
-.group-2-main-container {width:540px}
+@media screen and (max-width:1119px) {
+    .group-3-main-container {right:20; left:20px; top:auto; bottom:23px}
+    .group-3-main-title {font-size:22px; line-height:22px; padding:19px 0 0 0}
+    .group-3-main-price+.group-3-main-price {margin:2px 0 0 0}
+    .group-3-main-price-model {margin-right:10px}
+    .group-3-main-price em {margin:0 0 0 12px}
+}
+
 .group-3-1-main-logo {width:284px; height:47px; background:url(../images/group-3-1-main-title.png) no-repeat}
+
+@media screen and (max-width:1119px) {
+    .group-main-3-1 {height:728px}
+}
 
 .group-4-main {height:auto; margin:43px 0 0 0}
 .group-4-main .container {height:531px}
@@ -111,6 +190,18 @@ a {color:#778088}
 .group-4-main-price em {font-style:normal; font-size:22px; font-weight:500; color:#868686; margin:0 0 0 22px; text-decoration:line-through}
 .group-4-main-btn {display:inline-block; vertical-align:middle}
 
+@media screen and (max-width:1119px) {
+    .group-4-main {height:715px; margin:20px 15px 0 15px}
+    .group-4-main .container {height:715px}
+    .group-4-main-container {width:auto; right:15px; bottom:30px; left:15px; top:40px; text-align:center}
+    .group-4-main-title {font-size:30px; padding:20px 0 0 0}
+    .group-4-main-text {font-size:16px; line-height:19px; padding:1px 0 0 0}
+    .group-4-main-author {padding:29px 0 0 0}
+    .group-4-main-ctrl {margin:0; position:absolute; left:0; bottom:0; right:0}
+    .group-4-main-price {display:block; text-align:left; padding:0 0 0 15px}
+    .group-4-main-btn {display:block; padding:10px 0 0 0}
+}
+
 .group-opts {margin:30px 0 0 0}
 .group-opts::after {content:""; display:block; clear:both}
 .group-opt {position:relative; float:left; width:25%}
@@ -118,16 +209,37 @@ a {color:#778088}
 .group-opt-title {position:absolute; left:87px; top:50%; white-space:nowrap; transform:translateY(-50%); font-weight:500; font-size:24px; line-height:24px; color:#000}
 .group-opt-title strong {display:block; font-weight:bold}
 
+@media screen and (max-width:1119px) {
+    .group-opts {margin:4px 0 0 -15px}
+    .group-opt {width:50%; padding:9px 0 0 15px}
+    .group-opt-title {font-size:18px; line-height:18px; white-space:normal; left:102px}
+}
+
 .group-1 .group-opt:nth-child(1) {width:313px}
 .group-1 .group-opt:nth-child(2) {width:290px}
 .group-1 .group-opt:nth-child(3) {width:298px}
 .group-1 .group-opt:nth-child(4) {width:auto}
+
+@media screen and (max-width:1119px) {
+    .group-1 .group-opt:nth-child(1) {width:50%}
+    .group-1 .group-opt:nth-child(2) {width:50%}
+    .group-1 .group-opt:nth-child(3) {width:50%}
+    .group-1 .group-opt:nth-child(4) {width:50%}
+}
 
 .group-2 .group-opt:nth-child(1) {width:253px}
 .group-2 .group-opt:nth-child(2) {width:275px}
 .group-2 .group-opt:nth-child(3) {width:295px}
 .group-2 .group-opt:nth-child(4) {width:auto}
 .group-2 .group-opt-title {font-size:22px; line-height:26px}
+
+@media screen and (max-width:1119px) {
+    .group-2 .group-opt:nth-child(1) {width:50%}
+    .group-2 .group-opt:nth-child(2) {width:50%}
+    .group-2 .group-opt:nth-child(3) {width:50%}
+    .group-2 .group-opt:nth-child(4) {width:50%}
+    .group-2 .group-opt-title {font-size:18px; line-height:22px}
+}
 
 .group-list {margin:60px -12px 0 -12px}
 .group-list::after {content:""; display:block; clear:both}
@@ -146,6 +258,20 @@ a {color:#778088}
 .group-item-btn .btn span {margin:0 32px 0 0}
 .group-item-btn .btn span::after {right:-17px}
 
+.on-mobile {display:none}
+
+@media screen and (max-width:1119px) {
+    .group-list {margin:51px 0 0 0}
+    .group-1 .group-list {margin:351px 0 0 0}
+    .group-item {float:none; width:auto; padding:0; margin:43px 0 0 0; border:3px solid #354a86; border-radius:10px}
+    .group-item-inner {border:none; border-radius:0; height:auto}
+    .group-item-text {line-height:27px; padding:16px 0 0 0}
+    .on-mobile {display:block}
+    .group-item-ctrl {padding:0 30px}
+    .group-item-price {float:none}
+    .group-item-btn {float:none; padding:0 0 26px 0}
+}
+
 .remarks {padding:0 0 44px 0}
 .remarks-title {font-weight:500; font-size:25px}
 .remarks-text {margin:15px 0 0 0}
@@ -153,3 +279,11 @@ a {color:#778088}
 .remarks-standarts {margin:27px 0 0 0}
 .remarks-standarts {font-size:20px; line-height:24px}
 .remarks-standarts p {margin:0; padding:0}
+
+@media screen and (max-width:1119px) {
+    .remarks {padding:0 0 42px 0}
+    .remarks-text {margin:12px 0 0 0}
+    .remarks-text p {margin:12px 0 0 0}
+    .remarks-standarts {font-size:18px}
+    .remarks-standarts {margin:15px 0 0 0}
+}
